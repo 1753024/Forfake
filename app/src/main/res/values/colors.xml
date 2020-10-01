@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#8BC34A</color>
+    <color name="colorAccent">#BCAAA4</color>
+
+    <color name="background">#ffffff</color>
+    <color name="cpb_back">#fcef79</color>
+    <color name="cpb_front">#40b42e</color>
+    <color name="text_color">#373737</color>
+
+    <color name="red">#c62828</color>
+    <color name="white">#ffffff</color>
+
+    <color name="forest_background">#6f786c</color>
+
+    <color name="main">#6cd49c</color>
+</resources>

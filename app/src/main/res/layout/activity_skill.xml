@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.dell.a20hour.ui.SkillActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#68D79B"
+            tools:layout_editor_absoluteX="108dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibtnMenu"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/menu" />
+
+                    <ImageButton
+                        android:id="@+id/ibtnShowInfo"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_alignBottom="@+id/ibtnMenu"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/dollar" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="1,200"
+                        android:textSize="18sp"
+                        android:layout_toLeftOf="@id/ibtnShowInfo"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        />
+                </RelativeLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivSkillStage"
+                        android:layout_width="171dp"
+                        android:layout_height="181dp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/s1" />
+
+                    <com.devadvance.circularseekbar.CircularSeekBar
+                        android:id="@+id/circularSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_centerHorizontal="true"
+
+                        app:circle_color="@color/cpb_back"
+                        app:circle_progress_color="@color/cpb_front"
+                        app:circle_stroke_width="12dp"
+                        app:circle_x_radius="200dp"
+                        app:circle_y_radius="200dp"
+                        app:lock_enabled="true"
+                        app:max="24"
+                        app:move_outside_circle="true"
+                        app:pointer_alpha_ontouch="0"
+                        app:pointer_color="@color/cpb_front"
+                        app:pointer_halo_border_width="0dp"
+                        app:pointer_halo_color="@color/cpb_front"
+                        app:pointer_halo_width="0dp"
+                        app:pointer_radius="12dp"
+                        app:progress="25"
+                        app:use_custom_radii="true" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/advent_pro_thin"
+                        android:text="00:00"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="80sp"
+                        android:gravity="center_horizontal" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnStart"
+                    android:layout_width="132dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/cpb_front"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Start"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.DrawerLayout>
+
+
+
+
